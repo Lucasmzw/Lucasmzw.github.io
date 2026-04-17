@@ -6,54 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mzw的网站</title>
     <style>
-        /* 重置默认样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* 设置body为全屏，并添加背景图 */
+        /* 背景图适配 2560×1440 分辨率 */
         body {
-            /* 背景图路径（请确认15.jpg与html文件同目录） */
             background-image: url("15.jpg");
-            /* 保持背景图宽高比 */
-            background-size: cover;
-            /* 背景图居中显示 */
-            background-position: center center;
-            /* 背景图固定，滚动页面时不移动 */
-            background-attachment: fixed;
-            /* 防止背景图重复 */
+            background-size: cover; /* 保持比例缩放覆盖全屏 */
+            background-position: center; /* 居中显示 */
             background-repeat: no-repeat;
-            /* 设置最小高度为视口高度，确保全屏覆盖 */
-            min-height: 100vh;
-            /* 文字样式优化（可选） */
-            color: #fff; /* 白色文字更易读 */
-            text-shadow: 0 0 5px #000; /* 文字加阴影增强对比度 */
+            min-height: 100vh; /* 覆盖整个视口高度 */
             padding: 20px;
-            font-family: Arial, sans-serif;
+            color: #fff; /* 文字白色更清晰 */
+            text-shadow: 0 0 5px #000; /* 文字阴影增强对比度 */
         }
-
-        /* 链接样式优化 */
-        a {
-            color: #ffd700; /* 金色文字 */
-            text-decoration: none;
-            margin: 10px 0;
-            display: inline-block;
-        }
-
-        a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        /* 内容容器，增强可读性 */
+        /* 可选：给内容加半透明背景，提升可读性 */
         .content {
-            max-width: 800px;
-            background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+            background: rgba(0, 0, 0, 0.6);
             padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
+            border-radius: 8px;
+            max-width: 600px;
+        }
+        a {
+            color: #ffd700; /* 金色链接更醒目 */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -62,10 +38,13 @@
         <h1>欢迎来到mzw的网站！</h1>
         <p>这是一个简单的HTML页面，展示了基本的结构和内容。</p>
         <h2>关于我</h2>
-        <a href="https://space.bilibili.com/600025325">点击这里访问我的个人主页</a>
-        <br>
-        <a href="https://www.shinnku.com/">点击这里访问真红小站</a>
+        <!-- 添加 target="_blank" 新建窗口打开，rel 属性提升安全性 -->
+        <a href="https://space.bilibili.com/600025325" target="_blank" rel="noopener noreferrer">点击这里访问我的个人主页</a>
+        <br><br> <!-- 换行增加间距 -->
+        <a href="https://www.shinnku.com/" target="_blank" rel="noopener noreferrer">点击这里访问真红小站</a>
         <h3>让和平永存</h3>
     </div>
+    <!-- 若不需要直接显示图片，可删除以下 img 标签（背景图已设置） -->
+    <!-- <img src="15.jpg"> -->
 </body>
 </html>
